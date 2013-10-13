@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.moss.org.icepdf</groupId>
+	<artifactId>icepdf-pom</artifactId>
+	<version>trunk-SNAPSHOT</version>
+	
+	<name>${pom.artifactId}</name>
+	
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>core</module>
+		<module>viewer</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<target>1.5</target>
+					<source>1.5</source>
+					<debug>true</debug>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

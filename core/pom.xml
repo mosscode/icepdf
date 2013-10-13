@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.moss.org.icepdf</groupId>
+		<artifactId>icepdf-pom</artifactId>
+		<version>trunk-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>icepdf-core</artifactId>
+
+	<name>${pom.artifactId}</name>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.3</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src</source>
+								<source>conf</source>
+							</sources>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src</directory>
+									<targetPath />
+									<excludes>
+										<exclude>**/*.java</exclude>
+									</excludes>
+									<!-- <includes><include>**/*.afm</include></includes> -->
+								</resource>
+							</resources>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
